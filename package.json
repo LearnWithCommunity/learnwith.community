@@ -18,7 +18,12 @@
         "type": "git",
         "url": "https://github.com/LearnWithCommunity/learnwith.community.git"
     },
-    "scripts": {},
+    "scripts": {
+        "build": "stencil build --prerender",
+        "dev": "stencil build --dev --watch --serve"
+    },
     "dependencies": {},
-    "devDependencies": {}
+    "devDependencies": {
+        "@stencil/core": "^2.12.1"
+    }
 }
