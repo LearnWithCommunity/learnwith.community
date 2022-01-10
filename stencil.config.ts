@@ -4,16 +4,27 @@
  */
 
 import { Config } from '@stencil/core'
+import { postcss } from '@stencil/postcss'
+import tailwindcss from 'tailwindcss'
 
 export const config: Config = {
-    taskQueue: 'async',
-    minifyCss: true,
     minifyJs: true,
+    minifyCss: true,
+    taskQueue: 'async',
+    globalStyle: 'src/assets/styles/index.css',
+    devServer: {
+        reloadStrategy: 'pageReload'
+    },
     outputTargets: [
         {
             type: 'www',
-            serviceWorker: null,
+            serviceWorker: false,
             baseUrl: 'https://learnwith.community',
         }
+    ],
+    plugins: [
+        postcss({
+            plugins: [tailwindcss]
+        })
     ]
 }
