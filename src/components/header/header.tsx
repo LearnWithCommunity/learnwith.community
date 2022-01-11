@@ -4,14 +4,74 @@
  */
 
 import { Component, h } from '@stencil/core';
+import workMark from './../../assets/img/wordMark.svg';
+import homeIcon from './icons/home.svg';
+import eventsIcon from './icons/events.svg';
+import teamIcon from './icons/team.svg';
+import discordIcon from './icons/discord.svg';
+
+const invite = 'https://discord.gg/NyPa9CmgmS'
+
+const pages = [
+    {
+        text: 'Home',
+        icon: homeIcon,
+        link: '/'
+    },
+    {
+        text: 'Events',
+        icon: eventsIcon,
+        link: '#events'
+    },
+    {
+        text: 'Team',
+        icon: teamIcon,
+        link: '#team'
+    }
+]
 
 @Component({
     tag: 'l-header'
 })
 export class Header {
     render() {
-        return <header>
-            join the community!
+        return <header class="my-7 mx-7">
+            <div class="container mx-auto flex items-center justify-between">
+                {/* logo */}
+                <div innerHTML={workMark} class="w-12"></div>
+
+                {/* navigation */}
+                <div class="bg-[#F8DDE4] text-[#775563] rounded-t-full rounded-b-[145rem] h-20 fixed bottom-10 left-7 right-7 md:static md:bg-transparent">
+                    {/* the join pill */}
+                    <div class="absolute w-full bottom-16 flex justify-center">
+                        <a class="bg-[#F8DDE4] rounded-tl-[40px] rounded-tr-[40px] p-2 w-24 flex justify-center md:hidden" href={invite}>
+                            <div class="bg-[#8D29DC] my-2 p-4 rounded-full text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 aspect-square" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    {/* nav items */}
+                    <nav class="flex items-center justify-center h-full space-x-8 text-xs">
+                        {pages.map(page => <a class="flex flex-col items-center justify-center space-y-1" href={page.link}>
+                            <div innerHTML={page.icon}></div>
+                            <span>{page.text}</span>
+                        </a>)}
+                    </nav>
+                </div>
+
+                <div class="hidden md:flex items-center justify-center">
+                    {/* socials */}
+                
+                    {/* join button */}
+                    <button class="text-white bg-[#8D29DC] px-4 py-2 rounded-lg flex space-x-2 items-center">
+                        <div class="w-4" innerHTML={discordIcon}></div>
+                        <span>Join now</span>
+                    </button>
+                </div>
+            </div>
         </header>
     }
 }

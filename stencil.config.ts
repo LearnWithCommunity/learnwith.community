@@ -4,6 +4,7 @@
  */
 
 import { Config } from '@stencil/core'
+import { inlineSvg } from 'stencil-inline-svg'
 import { postcss } from '@stencil/postcss'
 import tailwindcss from 'tailwindcss'
 
@@ -23,8 +24,9 @@ export const config: Config = {
         }
     ],
     plugins: [
+        inlineSvg(),
         postcss({
             plugins: [tailwindcss]
-        })
+        }),
     ]
 }

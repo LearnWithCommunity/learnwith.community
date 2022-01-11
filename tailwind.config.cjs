@@ -7,8 +7,15 @@ module.exports = {
     darkMode: 'class',
     content: [
         './src/components/**/*.tsx',
+        './src/components/**/*.svg',
         './src/index.html'
     ],
-    theme: {},
+    theme: {
+        extend: {
+            colors: {
+                'body': '#FEF2EC'
+            }
+        }
+    },
     plugins: []
 }
