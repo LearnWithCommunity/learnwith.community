@@ -16,6 +16,14 @@
     display: none;
 }
 
+::selection {
+    background-color: #FBD8C5;
+}
+
+html.dark ::selection {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* Jones Font Family */
 
 @font-face {

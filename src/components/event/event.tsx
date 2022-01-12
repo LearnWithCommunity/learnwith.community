@@ -13,9 +13,9 @@ import bellIcon from './icons/bell.svg';
 })
 export class Event {
     render() {
-        return <section class="font-medium my-12">
+        return <section class="font-medium">
             {/* information of the event */}
-            <div class="mb-2 flex items-center justify-center text-sm">
+            <div class="mb-2 flex items-center justify-center text-sm md:text-base xl:text-lg">
                 {/* date of the event */}
                 <div class="flex items-center justify-center space-x-1">
                     <div class="mt-[-4px]" innerHTML={calendarIcon}></div>
@@ -27,16 +27,16 @@ export class Event {
                 {/* time of the event */}
                 <div class="mt-[1px] flex items-center justify-center space-x-1">
                     <div class="mt-[-4px]" innerHTML={clockIcon}></div>
-                    <span>3PM <small>to</small> 6PM <small>(IST)</small></span>
+                    <span>1 hour, 30 minutes</span>
                 </div>
             </div>
             
             {/* author/host link */}
-            <p class="mb-6 text-sm">By <a class="font-semibold text-[#da4167]" href="#">Aditya</a></p>
+            <p class="mb-6 text-sm md:text-base xl:text-lg">By <a class="font-semibold text-[#da4167]" href="#">Aditya</a></p>
 
-            <h2 class="mb-3 font-semibold text-2xl">Live Classes: Aptitude &amp; Reasoning</h2>
+            <h2 class="mb-3 font-semibold text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Live Classes: Aptitude &amp; Reasoning</h2>
 
-            <p class="mb-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+            <p class="mb-6 mx-auto max-w-xl lg:text-lg xl:max-w-2xl">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
 
             <div class="flex justify-center">
                 <a href="#" class="mx-4 text-xs text-white font-medium bg-[#da4167] px-3 py-2 rounded-lg flex space-x-1 items-center transition-colors hover:bg-[#BB254B]">

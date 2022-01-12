@@ -17,6 +17,10 @@ module.exports = {
         extend: {
             colors: {
                 'body': '#FEF2EC'
+            },
+            backgroundImage: {
+                events: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(254,242,236,1) 100%)',
+                'events-dark': 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(34,24,28,1) 100%)'
             }
         }
     },
