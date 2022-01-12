@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LHeader {
     }
+    interface LHero {
+    }
 }
 declare global {
     interface HTMLLHeaderElement extends Components.LHeader, HTMLStencilElement {
@@ -16,15 +18,25 @@ declare global {
         prototype: HTMLLHeaderElement;
         new (): HTMLLHeaderElement;
     };
+    interface HTMLLHeroElement extends Components.LHero, HTMLStencilElement {
+    }
+    var HTMLLHeroElement: {
+        prototype: HTMLLHeroElement;
+        new (): HTMLLHeroElement;
+    };
     interface HTMLElementTagNameMap {
         "l-header": HTMLLHeaderElement;
+        "l-hero": HTMLLHeroElement;
     }
 }
 declare namespace LocalJSX {
     interface LHeader {
     }
+    interface LHero {
+    }
     interface IntrinsicElements {
         "l-header": LHeader;
+        "l-hero": LHero;
     }
 }
 export { LocalJSX as JSX };
@@ -32,6 +44,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "l-header": LocalJSX.LHeader & JSXBase.HTMLAttributes<HTMLLHeaderElement>;
+            "l-hero": LocalJSX.LHero & JSXBase.HTMLAttributes<HTMLLHeroElement>;
         }
     }
 }

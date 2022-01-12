@@ -37,7 +37,7 @@ const pages = [
 })
 export class Header {
     render() {
-        return <header class="my-7 mx-7 font-semibold text-[#775563]">
+        return <header class="absolute w-full py-7 px-7 font-semibold text-[#775563]">
             <div class="container mx-auto flex items-center justify-between">
                 {/* logo */}
                 <div class="w-full">
