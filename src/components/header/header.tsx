@@ -24,7 +24,7 @@ const pages = [
     {
         text: 'Home',
         icon: homeIcon,
-        link: '/'
+        link: '#'
     },
     {
         text: 'Events',
@@ -59,7 +59,7 @@ export class Header {
     }
 
     render() {
-        return <header class="absolute w-full py-7 px-7 font-semibold text-[#775563] dark:text-[#AA8896]">
+        return <header class="absolute z-50 w-full py-7 px-7 font-semibold text-[#775563] dark:text-[#AA8896]">
             <div class="container mx-auto flex items-center justify-between">
                 {/* logo */}
                 <div class="w-full">

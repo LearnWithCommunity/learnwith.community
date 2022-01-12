@@ -6,12 +6,28 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface LEvent {
+    }
+    interface LEvents {
+    }
     interface LHeader {
     }
     interface LHero {
     }
 }
 declare global {
+    interface HTMLLEventElement extends Components.LEvent, HTMLStencilElement {
+    }
+    var HTMLLEventElement: {
+        prototype: HTMLLEventElement;
+        new (): HTMLLEventElement;
+    };
+    interface HTMLLEventsElement extends Components.LEvents, HTMLStencilElement {
+    }
+    var HTMLLEventsElement: {
+        prototype: HTMLLEventsElement;
+        new (): HTMLLEventsElement;
+    };
     interface HTMLLHeaderElement extends Components.LHeader, HTMLStencilElement {
     }
     var HTMLLHeaderElement: {
@@ -25,16 +41,24 @@ declare global {
         new (): HTMLLHeroElement;
     };
     interface HTMLElementTagNameMap {
+        "l-event": HTMLLEventElement;
+        "l-events": HTMLLEventsElement;
         "l-header": HTMLLHeaderElement;
         "l-hero": HTMLLHeroElement;
     }
 }
 declare namespace LocalJSX {
+    interface LEvent {
+    }
+    interface LEvents {
+    }
     interface LHeader {
     }
     interface LHero {
     }
     interface IntrinsicElements {
+        "l-event": LEvent;
+        "l-events": LEvents;
         "l-header": LHeader;
         "l-hero": LHero;
     }
@@ -43,6 +67,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "l-event": LocalJSX.LEvent & JSXBase.HTMLAttributes<HTMLLEventElement>;
+            "l-events": LocalJSX.LEvents & JSXBase.HTMLAttributes<HTMLLEventsElement>;
             "l-header": LocalJSX.LHeader & JSXBase.HTMLAttributes<HTMLLHeaderElement>;
             "l-hero": LocalJSX.LHero & JSXBase.HTMLAttributes<HTMLLHeroElement>;
         }
