@@ -7,6 +7,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Disable ugly scrollbar & tap outline on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
 /* Jones Font Family */
 
 @font-face {
