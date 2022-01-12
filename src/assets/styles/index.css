@@ -6,3 +6,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Jones Font Family */
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-Light.eot');
+    src: url('/assets/fonts/Jones-it-Light.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-Light.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-LightItalic.eot');
+    src: url('/assets/fonts/Jones-it-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-LightItalic.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-Book.eot');
+    src: url('/assets/fonts/Jones-it-Book.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-Book.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-BookItalic.eot');
+    src: url('/assets/fonts/Jones-it-BookItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-BookItalic.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-Medium.eot');
+    src: url('/assets/fonts/Jones-it-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-MediumItalic.eot');
+    src: url('/assets/fonts/Jones-it-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-MediumItalic.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-Bold.eot');
+    src: url('/assets/fonts/Jones-it-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-BoldItalic.eot');
+    src: url('/assets/fonts/Jones-it-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-BoldItalic.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-Black.eot');
+    src: url('/assets/fonts/Jones-it-Black.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-Black.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jones*';
+    src: url('/assets/fonts/Jones-it-BlackItalic.eot');
+    src: url('/assets/fonts/Jones-it-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Jones-it-BlackItalic.woff2') format('woff2'),
+        url('/assets/fonts/Jones-it-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}

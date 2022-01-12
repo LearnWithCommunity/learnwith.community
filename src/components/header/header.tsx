@@ -9,6 +9,8 @@ import homeIcon from './icons/home.svg';
 import eventsIcon from './icons/events.svg';
 import teamIcon from './icons/team.svg';
 import discordIcon from './icons/discord.svg';
+import twitterIcon from './icons/twitter.svg';
+import linkedinIcon from './icons/linkedin.svg';
 
 const invite = 'https://discord.gg/NyPa9CmgmS'
 
@@ -35,13 +37,13 @@ const pages = [
 })
 export class Header {
     render() {
-        return <header class="my-7 mx-7">
+        return <header class="my-7 mx-7 font-semibold text-[#775563]">
             <div class="container mx-auto flex items-center justify-between">
                 {/* logo */}
                 <div innerHTML={workMark} class="w-12"></div>
 
                 {/* navigation */}
-                <div class="bg-[#F8DDE4] text-[#775563] rounded-t-full rounded-b-[145rem] h-20 fixed bottom-10 left-7 right-7 md:static md:bg-transparent">
+                <div class="bg-[#F8DDE4] rounded-t-full rounded-b-[145rem] h-20 fixed bottom-10 left-7 right-7 md:static md:bg-transparent">
                     {/* the join pill */}
                     <div class="absolute w-full bottom-16 flex justify-center">
                         <a class="bg-[#F8DDE4] rounded-tl-[40px] rounded-tr-[40px] p-2 w-24 flex justify-center md:hidden" href={invite}>
@@ -64,11 +66,13 @@ export class Header {
 
                 <div class="hidden md:flex items-center justify-center">
                     {/* socials */}
+                    <a href="#" class="mx-2" innerHTML={linkedinIcon}></a>
+                    <a href="#" class="mx-2" innerHTML={twitterIcon}></a>
                 
                     {/* join button */}
-                    <button class="text-white bg-[#8D29DC] px-4 py-2 rounded-lg flex space-x-2 items-center">
+                    <button class="ml-3 text-white font-semibold bg-[#8D29DC] px-4 py-2 rounded-lg flex space-x-2 items-center">
                         <div class="w-4" innerHTML={discordIcon}></div>
-                        <span>Join now</span>
+                        <span class="mt-[2px]">Join now</span>
                     </button>
                 </div>
             </div>

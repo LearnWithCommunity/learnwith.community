@@ -11,6 +11,9 @@ module.exports = {
         './src/index.html'
     ],
     theme: {
+        fontFamily: {
+            body: [`'Jones*'`, 'sans-serif']
+        },
         extend: {
             colors: {
                 'body': '#FEF2EC'
