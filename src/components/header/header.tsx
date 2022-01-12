@@ -45,18 +45,21 @@ export class Header {
 
     toggleTheme: () => void = () => {
         const html = document.querySelector('html')
+        const themeColor = document.querySelector('meta[name=theme-color]')
 
         if (html.classList.contains('dark')) {
             // switch to light theme
             html.classList.remove('dark')
+            themeColor.setAttribute('content', '#FEF2EC')
         } else {
             // switch to dark theme
             html.classList.add('dark')
+            themeColor.setAttribute('content', '#22181c')
         }
     }
 
     render() {
-        return <header class="absolute w-full py-7 px-7 font-semibold text-[#775563]">
+        return <header class="absolute w-full py-7 px-7 font-semibold text-[#775563] dark:text-white">
             <div class="container mx-auto flex items-center justify-between">
                 {/* logo */}
                 <div class="w-full">
