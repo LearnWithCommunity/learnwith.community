@@ -59,7 +59,7 @@ export class Header {
     }
 
     render() {
-        return <header class="absolute w-full py-7 px-7 font-semibold text-[#775563] dark:text-white">
+        return <header class="absolute w-full py-7 px-7 font-semibold text-[#775563] dark:text-[#AA8896]">
             <div class="container mx-auto flex items-center justify-between">
                 {/* logo */}
                 <div class="w-full">
@@ -79,7 +79,7 @@ export class Header {
 
                     {/* nav items */}
                     <nav class="flex items-center justify-center h-full space-x-8 text-xs">
-                        {pages.map(page => <a class="flex flex-col items-center justify-center space-y-1" href={page.link}>
+                        {pages.map(page => <a class="flex flex-col items-center justify-center space-y-1 transition-colors hover:text-[#000000] dark:hover:text-white" href={page.link}>
                             <div innerHTML={page.icon}></div>
                             <span>{page.text}</span>
                         </a>)}
@@ -88,18 +88,18 @@ export class Header {
 
                 <div class="hidden md:flex items-center justify-end w-full">
                     {/* socials */}
-                    <a href={links.linkedin} target="blank" rel="noopener" class="mx-2 hidden lg:inline" innerHTML={linkedinIcon}></a>
-                    <a href={links.twitter} target="blank" rel="noopener" class="mx-2 hidden lg:inline" innerHTML={twitterIcon}></a>
+                    <a href={links.linkedin} target="blank" rel="noopener" class="mx-2 hidden transition-colors lg:inline hover:text-black dark:hover:text-white" innerHTML={linkedinIcon}></a>
+                    <a href={links.twitter} target="blank" rel="noopener" class="mx-2 hidden transition-colors lg:inline hover:text-black dark:hover:text-white" innerHTML={twitterIcon}></a>
                 
                     {/* join button */}
-                    <a class="mx-4 text-white font-semibold bg-[#8D29DC] px-4 py-2 rounded-lg flex space-x-2 items-center" href={links.invite}>
+                    <a class="mx-4 text-white font-semibold bg-[#8D29DC] px-4 py-2 rounded-lg flex space-x-2 items-center transition-colors hover:bg-[#651A9E]" href={links.invite}>
                         <div class="w-4" innerHTML={discordIcon}></div>
                         <span class="mt-[2px]">Join now</span>
                     </a>
                 </div>
 
                 {/* dark theme button */}
-                <button onClick={this.toggleTheme}>
+                <button onClick={this.toggleTheme} class="transition-colors hover:text-black dark:hover:text-white">
                     <div class="dark:hidden" innerHTML={bulbOutline}></div>
                     <div class="hidden dark:inline" innerHTML={bulbFilled}></div>
                 </button>
