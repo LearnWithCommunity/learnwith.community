@@ -53,10 +53,8 @@ export class Header {
                     {/* the join pill */}
                     <div class="absolute w-full bottom-16 flex justify-center">
                         <a class="bg-[#F8DDE4] rounded-tl-[40px] rounded-tr-[40px] p-2 w-24 flex justify-center md:hidden" href={links.invite}>
-                            <div class="bg-[#8D29DC] my-2 p-4 rounded-full text-white">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 aspect-square" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
-                                </svg>
+                            <div class="bg-[#8D29DC] my-2 p-5 rounded-full text-white">
+                                <div class="w-5" innerHTML={discordIcon}></div>
                             </div>
                         </a>
                     </div>
