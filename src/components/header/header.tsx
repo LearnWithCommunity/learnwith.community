@@ -50,7 +50,7 @@ export class Header {
         if (html.classList.contains('dark')) {
             // switch to light theme
             html.classList.remove('dark')
-            themeColor.setAttribute('content', '##FCE5D9')
+            themeColor.setAttribute('content', '#FCE5D9')
         } else {
             // switch to dark theme
             html.classList.add('dark')
