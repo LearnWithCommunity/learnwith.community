@@ -11,6 +11,8 @@ import teamIcon from './icons/team.svg';
 import discordIcon from './icons/discord.svg';
 import twitterIcon from './icons/twitter.svg';
 import linkedinIcon from './icons/linkedin.svg';
+import bulbOutline from './icons/bulb-outline.svg';
+import bulbFilled from './icons/bulb-filled.svg';
 
 const links = {
     invite: 'https://discord.gg/NyPa9CmgmS',
@@ -40,6 +42,19 @@ const pages = [
     tag: 'l-header'
 })
 export class Header {
+
+    toggleTheme: () => void = () => {
+        const html = document.querySelector('html')
+
+        if (html.classList.contains('dark')) {
+            // switch to light theme
+            html.classList.remove('dark')
+        } else {
+            // switch to dark theme
+            html.classList.add('dark')
+        }
+    }
+
     render() {
         return <header class="absolute w-full py-7 px-7 font-semibold text-[#775563]">
             <div class="container mx-auto flex items-center justify-between">
@@ -74,11 +89,17 @@ export class Header {
                     <a href={links.twitter} target="blank" rel="noopener" class="mx-2 hidden lg:inline" innerHTML={twitterIcon}></a>
                 
                     {/* join button */}
-                    <a class="ml-4 text-white font-semibold bg-[#8D29DC] px-4 py-2 rounded-lg flex space-x-2 items-center" href={links.invite}>
+                    <a class="mx-4 text-white font-semibold bg-[#8D29DC] px-4 py-2 rounded-lg flex space-x-2 items-center" href={links.invite}>
                         <div class="w-4" innerHTML={discordIcon}></div>
                         <span class="mt-[2px]">Join now</span>
                     </a>
                 </div>
+
+                {/* dark theme button */}
+                <button onClick={this.toggleTheme}>
+                    <div class="dark:hidden" innerHTML={bulbOutline}></div>
+                    <div class="hidden dark:inline" innerHTML={bulbFilled}></div>
+                </button>
             </div>
         </header>
     }
