@@ -67,7 +67,7 @@ export class Header {
                 </div>
 
                 {/* navigation */}
-                <div class="bg-[#F8DDE4] rounded-t-full rounded-b-[145rem] h-20 fixed bottom-10 left-7 right-7 md:w-full md:static md:bg-transparent md:flex justify-center dark:bg-[#302127]">
+                <div class="bg-[#F8DDE4] rounded-t-full rounded-b-[145rem] h-20 fixed bottom-10 left-7 right-7 md:w-full md:static md:bg-transparent md:flex justify-center dark:bg-[#302127] md:dark:bg-transparent">
                     {/* the join pill */}
                     <div class="absolute w-full bottom-16 flex justify-center">
                         <a class="bg-[#F8DDE4] rounded-tl-[40px] rounded-tr-[40px] p-2 w-24 flex justify-center md:hidden dark:bg-[#302127]" href={links.invite}>
