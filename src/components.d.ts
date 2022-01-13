@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface LEvent {
+        "event": any;
     }
     interface LEvents {
     }
@@ -49,6 +50,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface LEvent {
+        "event"?: any;
     }
     interface LEvents {
     }

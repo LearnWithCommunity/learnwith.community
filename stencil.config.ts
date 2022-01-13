@@ -22,6 +22,7 @@ export const config: Config = {
             type: 'www',
             serviceWorker: false,
             baseUrl: 'https://learnwith.community',
+            prerenderConfig: 'prerender.config.ts'
         }
     ],
     plugins: [
