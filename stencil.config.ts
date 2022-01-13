@@ -14,6 +14,7 @@ export const config: Config = {
     taskQueue: 'async',
     globalStyle: 'src/assets/styles/index.css',
     devServer: {
+        openBrowser: false,
         reloadStrategy: 'pageReload'
     },
     outputTargets: [
