@@ -14,11 +14,11 @@ export class Events {
 
     async componentWillLoad() {
         // send an HTTP request to our API
-        const { data } = await axios({
-            url: '/api/events'
-        })
+        // const { data } = await axios({
+        //     url: '/api/events'
+        // })
 
-        this.events = data
+        // this.events = data
     }
 
     render() {
