@@ -4,7 +4,6 @@
  */
 
 import { Component, State, h } from '@stencil/core';
-import axios from 'axios';
 
 @Component({
     tag: 'l-events'

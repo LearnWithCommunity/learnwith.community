@@ -14,6 +14,7 @@ import linkedinIcon from './icons/linkedin.svg';
 import bulbOutline from './icons/bulb-outline.svg';
 import bulbFilled from './icons/bulb-filled.svg';
 
+
 const links = {
     invite: 'https://discord.gg/NyPa9CmgmS',
     linkedin: 'https://www.linkedin.com/company/learn-with-community',
