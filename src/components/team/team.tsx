@@ -23,9 +23,9 @@ export class Team {
                     <l-member name="Riya Sahu" position="Community Leader" avatar="/assets/img/avatars/riya.png" bio="B.Tech CSE'24 | AI & ML | Community enthusiast learning new skills." class="w-[33.333%] min-w-[340px]">
                         <div class="absolute -z-10 top-0 bg-[#2b1225] dark:bg-[#fbd8c5] aspect-square w-8 rounded-full -translate-x-20 translate-y-36"></div>
                     </l-member>
-                    {/* <l-member name="Deepanshu Sharma" position="Community Leader" avatar="/assets/img/avatars/deepanshu.jpg" bio="Will be updated on production" class="w-[33.333%] min-w-[340px] mt-6">
+                    <l-member name="Deepanshu Sharma" position="Community Leader" avatar="/assets/img/avatars/deepanshu.jpg" bio="Computer geek | C++,AI & ML | Problem solver" class="w-[33.333%] min-w-[340px] mt-6">
                         <div class="absolute -z-10 top-0 bg-[#fbd8c5] aspect-square w-44 rounded-full -translate-x-6 -translate-y-4 dark:bg-[#372b2d]"></div>
-                    </l-member> */}
+                    </l-member>
                     <l-member name="Dhruvraj Solanki" position="Community Leader" avatar="/assets/img/avatars/dhruv.png" bio="Exploring & Coding Javascript | ML Enthusiast" class="w-[33.333%] min-w-[340px] mt-6">
                         <div class="absolute -z-10 top-0 bg-[#1B998B] aspect-square w-28 rounded-full -translate-x-14 translate-y-16"></div>
                     </l-member>

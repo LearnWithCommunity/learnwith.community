@@ -135,3 +135,12 @@ html.dark ::selection {
     font-style: italic;
     font-display: swap;
 }
+
+/* a class to prevent user drag */
+.user-drag-false {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}

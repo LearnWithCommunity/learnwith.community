@@ -21,7 +21,7 @@ export class Member {
             <slot/>
 
             {/* profile image */}
-            <img class="rounded-full object-cover aspect-square w-48 border-solid border-8 bg-[#fef2ec] border-[#fef2ec] dark:bg-[#22181c] dark:border-[#22181c]" src={this.avatar} alt={this.name}/>
+            <img class="user-drag-false rounded-full select-none object-cover aspect-square w-48 border-solid border-8 bg-[#fef2ec] border-[#fef2ec] dark:bg-[#22181c] dark:border-[#22181c]" src={this.avatar} alt={this.name}/>
 
             <div class="text-center flex flex-col items-center justify-center py-2">
                 {/* name */}
