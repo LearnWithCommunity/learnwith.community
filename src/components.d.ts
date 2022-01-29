@@ -15,6 +15,15 @@ export namespace Components {
     }
     interface LHero {
     }
+    interface LMember {
+        "avatar": string;
+        "bio": string;
+        "links": string;
+        "name": string;
+        "position": string;
+    }
+    interface LTeam {
+    }
 }
 declare global {
     interface HTMLLEventElement extends Components.LEvent, HTMLStencilElement {
@@ -41,11 +50,25 @@ declare global {
         prototype: HTMLLHeroElement;
         new (): HTMLLHeroElement;
     };
+    interface HTMLLMemberElement extends Components.LMember, HTMLStencilElement {
+    }
+    var HTMLLMemberElement: {
+        prototype: HTMLLMemberElement;
+        new (): HTMLLMemberElement;
+    };
+    interface HTMLLTeamElement extends Components.LTeam, HTMLStencilElement {
+    }
+    var HTMLLTeamElement: {
+        prototype: HTMLLTeamElement;
+        new (): HTMLLTeamElement;
+    };
     interface HTMLElementTagNameMap {
         "l-event": HTMLLEventElement;
         "l-events": HTMLLEventsElement;
         "l-header": HTMLLHeaderElement;
         "l-hero": HTMLLHeroElement;
+        "l-member": HTMLLMemberElement;
+        "l-team": HTMLLTeamElement;
     }
 }
 declare namespace LocalJSX {
@@ -58,11 +81,22 @@ declare namespace LocalJSX {
     }
     interface LHero {
     }
+    interface LMember {
+        "avatar"?: string;
+        "bio"?: string;
+        "links"?: string;
+        "name"?: string;
+        "position"?: string;
+    }
+    interface LTeam {
+    }
     interface IntrinsicElements {
         "l-event": LEvent;
         "l-events": LEvents;
         "l-header": LHeader;
         "l-hero": LHero;
+        "l-member": LMember;
+        "l-team": LTeam;
     }
 }
 export { LocalJSX as JSX };
@@ -73,6 +107,8 @@ declare module "@stencil/core" {
             "l-events": LocalJSX.LEvents & JSXBase.HTMLAttributes<HTMLLEventsElement>;
             "l-header": LocalJSX.LHeader & JSXBase.HTMLAttributes<HTMLLHeaderElement>;
             "l-hero": LocalJSX.LHero & JSXBase.HTMLAttributes<HTMLLHeroElement>;
+            "l-member": LocalJSX.LMember & JSXBase.HTMLAttributes<HTMLLMemberElement>;
+            "l-team": LocalJSX.LTeam & JSXBase.HTMLAttributes<HTMLLTeamElement>;
         }
     }
 }
