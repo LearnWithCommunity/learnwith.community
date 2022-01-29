@@ -5,6 +5,7 @@
 
 import { Component, h, Prop } from '@stencil/core';
 
+
 @Component({
     tag: 'l-member'
 })
@@ -18,7 +19,7 @@ export class Member {
     render() {
         return <div class="relative my-4 flex flex-col justify-end items-center">
             {/* profile circle */}
-            <slot/>
+            <slot name="avatar-artifact"/>
 
             {/* profile image */}
             <img class="user-drag-false rounded-full select-none object-cover aspect-square w-48 border-solid border-8 bg-[#fef2ec] border-[#fef2ec] dark:bg-[#22181c] dark:border-[#22181c]" src={this.avatar} alt={this.name}/>
@@ -35,6 +36,7 @@ export class Member {
             </div>
 
             {/* social links */}
+            <slot name="social-links"/>
         </div>
     }
 }
