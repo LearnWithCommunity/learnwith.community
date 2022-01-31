@@ -49,7 +49,7 @@ export class Team {
                         <div slot="avatar-artifact" class="absolute -z-10 top-0 bg-[#fbd8c5] aspect-square w-44 rounded-full -translate-x-6 -translate-y-4 dark:bg-[#372b2d]"></div>
                         <div slot="social-links" class="py-2 flex justify-center space-x-4 text-[#3C2A2F] dark:text-[#99707E]">
                             <a href="https://www.instagram.com/deepanshusharma0_0/" target="_blank" rel="noopener" class="transition-colors hover:text-black dark:hover:text-white" innerHTML={instagramIcon}></a>
-                            <a href="https://www.linkedin.com/in/riya-sahu-672471211/" target="_blank" rel="noopener" class="transition-colors hover:text-black dark:hover:text-white" innerHTML={linkedinIcon}></a>
+                            <a href="https://www.linkedin.com/in/deepanshu-sharma-953a81160/" target="_blank" rel="noopener" class="transition-colors hover:text-black dark:hover:text-white" innerHTML={linkedinIcon}></a>
                         </div>
                     </l-member>
                     <l-member name="Dhruvraj Solanki" position="Community Leader" avatar="/assets/img/avatars/dhruv.png" bio="Exploring & Coding Javascript | ML Enthusiast" class="w-[33.333%] min-w-[340px] mt-6">
