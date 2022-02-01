@@ -18,8 +18,8 @@ import instagramIcon from './icons/instagram.svg';
 export class Team {
     render() {
         return <section id="team">
-            <div class="container mx-auto flex flex-col items-center py-20 text-[#3C2A31] dark:text-white">
-                <h1 class="text-4xl font-bold mb-6">Our Team</h1>
+            <div class="container mx-auto flex flex-col items-center pt-10 text-[#3C2A31] md:pt-0 xl:-mt-20 dark:text-white">
+                <h1 class="text-4xl font-bold mb-12">Our Team</h1>
                 <div class="md:flex md:flex-wrap md:justify-center md:max-w-6xl">
                     <l-member name="Aditya Sahu" position="Community Leader" avatar="https://github.com/adityasahu252.png" bio="Coding educator at PrepInsta, Blockchain Developer." class="w-[33.333%] min-w-[340px]">
                         <div slot="avatar-artifact" class="absolute -z-10 top-0 bg-[#ff0054] aspect-square w-20 rounded-full translate-x-20 translate-y-20"></div>
