@@ -37,11 +37,11 @@ export class Event {
     }
 
     render() {
-        return <article class="relative font-medium bg-[#fef2ec] rounded-xl p-8 w-full flex flex-col justify-start max-w-[480px] lg:h-full">
+        return <article class="relative font-medium bg-[#fef2ec] rounded-xl p-8 w-full flex flex-col justify-start max-w-[480px] lg:h-full dark:bg-[#22181c]">
             {/* the calendar hangers */}
             <div class="-mt-16 mx-10 mb-4 flex justify-between">
-                <div class="w-14 h-20 rounded-full bg-[#fef2ec] border-[12px] border-[#fbd8c7]"></div>
-                <div class="w-14 h-20 rounded-full bg-[#fef2ec] border-[12px] border-[#fbd8c7]"></div>
+                <div class="w-14 h-20 rounded-full bg-[#fef2ec] border-[12px] border-[#fbd8c7] dark:border-[#372b2d] dark:bg-[#22181c]"></div>
+                <div class="w-14 h-20 rounded-full bg-[#fef2ec] border-[12px] border-[#fbd8c7] dark:border-[#372b2d] dark:bg-[#22181c]"></div>
             </div>
 
             <div class="h-full flex flex-col justify-between">

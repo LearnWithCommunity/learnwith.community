@@ -21,7 +21,11 @@
 }
 
 html.dark ::selection {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#events > h1::selection {
+    background-color: #fef2ec;
 }
 
 /* Jones Font Family */
