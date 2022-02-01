@@ -4,6 +4,7 @@
  */
 
 import { Component, State, h } from '@stencil/core';
+import axios from 'axios';
 
 @Component({
     tag: 'l-events'
@@ -13,19 +14,18 @@ export class Events {
 
     async componentWillLoad() {
         // send an HTTP request to our API
-        // const { data } = await axios({
-        //     url: '/api/events'
-        // })
+        const { data } = await axios({
+            url: '/api/events'
+        })
 
-        // this.events = data
+        this.events = data
     }
 
     render() {
-        return <div id="events" class="flex justify-center items-center">
-            <div class="container mx-auto mt-[5rem] p-10 flex flex-col justify-center text-center items-center space-y-5 dark:text-white">
-                <l-event event={JSON.stringify(this.events[0])}></l-event>
-                <l-event event={JSON.stringify(this.events[1])} class="scale-75"></l-event>
-                <l-event event={JSON.stringify(this.events[2])} class="scale-[.6] -translate-y-14"></l-event>
+        return <div id="events" class="flex flex-col justify-center items-center py-20 bg-[#fbd8c6]">
+            <h1 class="text-4xl font-bold mb-16">Upcoming Events</h1>
+            <div class="flex flex-col px-6 space-y-12 lg:space-y-0 lg:flex-row lg:space-x-8">
+                {this.events.map(event => <l-event event={JSON.stringify(event)}></l-event>)}
             </div>
         </div>
     }
