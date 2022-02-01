@@ -13,6 +13,7 @@ export const config: Config = {
     minifyCss: true,
     taskQueue: 'async',
     globalStyle: 'src/assets/styles/index.css',
+    globalScript: 'src/assets/scripts/index.ts',
     devServer: {
         openBrowser: false,
         reloadStrategy: 'pageReload'
