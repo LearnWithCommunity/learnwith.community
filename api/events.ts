@@ -96,8 +96,10 @@ export default async (req: VercelRequest, res: VercelResponse): Promise<VercelRe
     // return the trimmed events with status code 200
     return res.status(200).json(
         // sort them by time created created
-        events.sort((a, b) => {
-            return Number(a.meta.time) - Number(b.meta.time)
-        })
+        events
+            .sort((a, b) => {
+                return Number(a.meta.time) - Number(b.meta.time)
+            })
+            .filter(event => Boolean(event))
     )
 }
