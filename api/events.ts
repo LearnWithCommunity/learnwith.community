@@ -5,10 +5,22 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import axios from 'axios';
+import { DateTime } from 'luxon';
+
+interface EventImpl {
+    title: string
+    description: string
+    link: string
+    meta: {
+        time: string
+        host: string
+        link: string
+    }
+}
 
 // parseEvent() takes an event string and outputs a parsed object
 // which can be converted to JSON for responding
-const parseEvent = (msg: string) => {
+const parseEvent = (msg: string): EventImpl => {
     // split the message where there is an empty line
     // into different chunks
     const chunks = msg.split('\n\n')
@@ -69,15 +81,23 @@ export default async (req: VercelRequest, res: VercelResponse): Promise<VercelRe
     
     // parse the message content and return an object instead
     .map(event => parseEvent(event))
-    
-    // sort them by time created created
-    .sort((a, b) => {
-        return Number(b.meta.time) - Number(a.meta.time)
-    })
 
+    // filter only future events, past events should not be shown
+    .filter((event: EventImpl) => {
+        const now = DateTime.local().toMillis()
+        const eventDate = Number(event.meta.time)
+
+        return eventDate > now
+    })
+    
     // trim the events to only get 3 of them
     events.length = 3
 
     // return the trimmed events with status code 200
-    return res.status(200).json(events)
+    return res.status(200).json(
+        // sort them by time created created
+        events.sort((a, b) => {
+            return Number(a.meta.time) - Number(b.meta.time)
+        })
+    )
 }
