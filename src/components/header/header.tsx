@@ -4,6 +4,7 @@
  */
 
 import { Component, h } from '@stencil/core';
+import { links } from '../../store';
 import workMark from './../../assets/img/wordMark.svg';
 import homeIcon from './icons/home.svg';
 import eventsIcon from './icons/events.svg';
@@ -13,13 +14,6 @@ import twitterIcon from './icons/twitter.svg';
 import linkedinIcon from './icons/linkedin.svg';
 import bulbOutline from './icons/bulb-outline.svg';
 import bulbFilled from './icons/bulb-filled.svg';
-
-
-const links = {
-    invite: 'https://discord.gg/NyPa9CmgmS',
-    linkedin: 'https://www.linkedin.com/company/learn-with-community',
-    twitter: 'https://twitter.com/LearnWithComm'
-}
 
 const pages = [
     {
