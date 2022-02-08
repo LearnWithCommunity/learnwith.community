@@ -16,20 +16,20 @@ export const config: Config = {
     globalScript: 'src/assets/scripts/index.ts',
     devServer: {
         openBrowser: false,
-        reloadStrategy: 'pageReload'
+        reloadStrategy: 'pageReload',
     },
     outputTargets: [
         {
             type: 'www',
             serviceWorker: false,
             baseUrl: 'https://learnwith.community',
-            prerenderConfig: 'prerender.config.ts'
-        }
+            prerenderConfig: 'prerender.config.ts',
+        },
     ],
     plugins: [
         inlineSvg(),
         postcss({
-            plugins: [tailwindcss]
+            plugins: [tailwindcss],
         }),
-    ]
+    ],
 }

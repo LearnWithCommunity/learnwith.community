@@ -4,8 +4,8 @@
  */
 
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import axios from 'axios';
-import { DateTime } from 'luxon';
+import axios from 'axios'
+import { DateTime } from 'luxon'
 
 interface EventImpl {
     title: string
@@ -41,14 +41,17 @@ const parseEvent = (msg: string): EventImpl => {
             time: meta.find(line => line.match('Time:')).match(/\d+/g)[0],
 
             // grab the host's name, by ignoring the heading and emoji
-            host: meta.find(line => line.match('Host:')).split('Host:**')[1].trim(),
+            host: meta
+                .find(line => line.match('Host:'))
+                .split('Host:**')[1]
+                .trim(),
 
             // grab the host's link from within those angle brackets
-            link: meta.find(line => line.match('Host Link:')).match(/<(.*?)>/)[1]
+            link: meta.find(line => line.match('Host Link:')).match(/<(.*?)>/)[1],
         },
 
         // finally the link of the event
-        link: chunks[3]
+        link: chunks[3],
     }
 
     return event
@@ -75,21 +78,23 @@ export default async (req: VercelRequest, res: VercelResponse): Promise<VercelRe
     })
 
     // filtering the ignored ones
-    const events = data.filter(msg => ignored.includes(msg.id) == false)
-    // discard other properties, as we only want the message content
-    .map(msg => msg.content)
-    
-    // parse the message content and return an object instead
-    .map(event => parseEvent(event))
+    const events = data
+        .filter(msg => ignored.includes(msg.id) == false)
 
-    // filter only future events, past events should not be shown
-    .filter((event: EventImpl) => {
-        const now = DateTime.local().toMillis()
-        const eventDate = Number(event.meta.time)
+        // discard other properties, as we only want the message content
+        .map(msg => msg.content)
 
-        return eventDate > now
-    })
-    
+        // parse the message content and return an object instead
+        .map(event => parseEvent(event))
+
+        // filter only future events, past events should not be shown
+        .filter((event: EventImpl) => {
+            const now = DateTime.local().toMillis()
+            const eventDate = Number(event.meta.time)
+
+            return eventDate > now
+        })
+
     // trim the events to only get 3 of them
     events.length = 3
 
@@ -100,6 +105,6 @@ export default async (req: VercelRequest, res: VercelResponse): Promise<VercelRe
             .sort((a, b) => {
                 return Number(a.meta.time) - Number(b.meta.time)
             })
-            .filter(event => Boolean(event))
+            .filter(event => Boolean(event)),
     )
 }

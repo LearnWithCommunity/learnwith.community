@@ -3,12 +3,12 @@
  *  Created On 13 January 2022
  */
 
-import { PrerenderConfig } from '@stencil/core';
+import { PrerenderConfig } from '@stencil/core'
 
 export const config: PrerenderConfig = {
     hydrateOptions() {
         return {
-            excludeComponents: ['l-events', 'l-event']
+            excludeComponents: ['l-events', 'l-event'],
         }
-    }
+    },
 }

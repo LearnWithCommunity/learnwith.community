@@ -24,7 +24,7 @@
 
 // const main = async () => {
 //     await watiUntilHydrated()
-    
+
 //     // we avoid animations and other graphically intensive
 //     // effects on mobile devices since, we may not have much memory
 //     if (isMobile == false) {

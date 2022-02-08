@@ -6,5 +6,5 @@
 export const links = {
     invite: 'https://discord.gg/NyPa9CmgmS',
     linkedin: 'https://www.linkedin.com/company/learn-with-community',
-    twitter: 'https://twitter.com/LearnWithComm'
+    twitter: 'https://twitter.com/LearnWithComm',
 }
