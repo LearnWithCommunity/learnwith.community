@@ -3,8 +3,8 @@
  *  Created On 01 February 2022
  */
 
-// import SmoothScroll from 'smooth-scroll'
-// import { isMobile } from '../../util.js'
+import SmoothScroll from 'smooth-scroll'
+import { isMobile } from '../../util.js'
 
 // const watiUntilHydrated = (): Promise<void> => new Promise(resolve => {
 //     const observer = new MutationObserver(() => {
@@ -22,19 +22,19 @@
 //     })
 // })
 
-// const main = async () => {
-//     await watiUntilHydrated()
+const main = async () => {
+    // await watiUntilHydrated()
 
-//     // we avoid animations and other graphically intensive
-//     // effects on mobile devices since, we may not have much memory
-//     if (isMobile == false) {
-//         // attach the kinetic smooth scroll effect
-//         new SmoothScroll('a[href*="#"]', {
-//             easing: 'easeInOutQuart'
-//         })
-//     } else {
-//         document.querySelector('html').style.scrollBehavior = 'smooth'
-//     }
-// }
+    // we avoid animations and other graphically intensive
+    // effects on mobile devices since, we may not have much memory
+    if (isMobile == false) {
+        // attach the kinetic smooth scroll effect
+        new SmoothScroll('a[href*="#"]', {
+            easing: 'easeInOutQuart'
+        })
+    } else {
+        document.querySelector('html').style.scrollBehavior = 'smooth'
+    }
+}
 
-// main()
+main()
