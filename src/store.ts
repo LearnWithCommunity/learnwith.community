@@ -4,7 +4,7 @@
  */
 
 export const links = {
-    invite: 'https://discord.gg/NyPa9CmgmS',
+    invite: 'https://discord.gg/tJHffq89xc',
     linkedin: 'https://www.linkedin.com/company/learn-with-community',
     twitter: 'https://twitter.com/LearnWithComm',
 }
