@@ -63,7 +63,7 @@ export class Team {
                         <l-member
                             name="Vasanth Srivatsa"
                             position="Community Leader"
-                            avatar="https://api.vsnth.dev?avatar=true"
+                            avatar="https://github.com/vsnthdev.png"
                             bio="Computer geek 👨‍💻 I make videos 📹 on YouTube & tweet 🐦 about JavaScript."
                             class="w-[33.333%] min-w-[340px]"
                         >
