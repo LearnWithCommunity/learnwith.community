@@ -12,7 +12,7 @@
         "url": "https://vsnth.dev"
     },
     "engines": {
-        "node": "14"
+        "node": "16.x"
     },
     "repository": {
         "type": "git",
