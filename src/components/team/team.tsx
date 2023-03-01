@@ -170,7 +170,7 @@ export class Team {
                         <l-member
                             name="Dhruvraj Solanki"
                             position="Community Leader"
-                            avatar="/assets/img/avatars/dhruv.png"
+                            avatar="/assets/img/avatars/dhruv1.png"
                             bio="Exploring & Coding Javascript | ML Enthusiast"
                             class="w-[33.333%] min-w-[340px] mt-6"
                         >
