@@ -6,6 +6,7 @@
 import { Component, h } from '@stencil/core'
 import twitterIcon from '../header/icons/twitter.svg'
 import discordIcon from './icons/discord.svg'
+import devIcon from './icons/dev.svg'
 import youtubeIcon from './icons/youtube.svg'
 import githubIcon from './icons/github.svg'
 import linkedinIcon from '../header/icons/linkedin.svg'
@@ -202,6 +203,51 @@ export class Team {
                                     rel="noopener"
                                     class="transition-colors hover:text-black dark:hover:text-white"
                                     innerHTML={twitterIcon}
+                                ></a>
+                            </div>
+                        </l-member>
+                        <l-member
+                            name="David Leal"
+                            position="Community Leader"
+                            avatar="https://github.com/Panquesito7.png"
+                            bio="Open-source advocate and maintainer 🥑 Managing 30+ communities 🚀 Game and app developer 🎮 Mentor & supporter 💖"
+                            class="w-[33.333%] min-w-[340px]"
+                        >
+                            <div
+                                slot="avatar-artifact"
+                                class="absolute -z-10 top-0 bg-[#0030e7] aspect-square w-20 rounded-full  translate-x-11 translate-y-32"
+                            ></div>
+                            <div
+                                slot="social-links"
+                                class="py-2 flex justify-center space-x-4 text-[#3C2A2F] dark:text-[#99707E]"
+                            >
+                                <a
+                                    href="https://github.com/Panquesito7"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="transition-colors hover:text-black dark:hover:text-white"
+                                    innerHTML={githubIcon}
+                                ></a>
+                                <a
+                                    href="https://twitter.com/David_Leal_7"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="transition-colors hover:text-black dark:hover:text-white"
+                                    innerHTML={twitterIcon}
+                                ></a>
+                                <a
+                                    href="https://dev.to/Panquesito7"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="transition-colors hover:text-black dark:hover:text-white"
+                                    innerHTML={devIcon}
+                                ></a>
+                                <a
+                                    href="https://youtube.com/@Panquesito7"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="transition-colors hover:text-black dark:hover:text-white"
+                                    innerHTML={youtubeIcon}
                                 ></a>
                             </div>
                         </l-member>
